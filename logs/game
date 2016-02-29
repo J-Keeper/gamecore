@@ -1,0 +1,2139 @@
+2016-02-19 17:34:50,385 [INFO] [main] Logs.<clinit> - Nutz is licensed under the Apache License, Version 2.0 .
+Report bugs : https://github.com/nutzam/nutz/issues
+2016-02-19 17:34:50,678 [INFO] [main] Scans.scan - same resource path [onfig/server.js](config/server.js/ F:\GameCore2.0\config\server.js) will be override by [server.js](F:\GameCore2.0\config\server.js)
+2016-02-19 17:34:50,686 [WARN] [main] AnnotationIocLoader.<init> - NONE Annotation-Class found!! Check your configure or report a bug!! packages=[com.wabao.module]
+2016-02-19 17:34:50,688 [INFO] [main] NutIoc.<init> - NutIoc init begin ...
+2016-02-19 17:34:50,693 [INFO] [main] NutIoc.<init> - ... NutIoc init complete
+2016-02-19 17:34:50,819 [INFO] [main] ScheduledManager.<init> - 开启定时器
+2016-02-19 17:34:50,874 [ERROR] [main] GameMain.main - Game Server start fail!
+org.nutz.ioc.IocException: Object 'accountManager' without define! For object [accountManager] - type:[class com.xgame.module.account.dao.AccountManager] FAIL to create Ioc Bean name=[gameContext] 
+beacase [Object 'accountManager' without define! For object [accountManager] - type:[class com.xgame.module.account.dao.AccountManager]]
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:141)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:196)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.xgame.bootstrap.GameMain.main(GameMain.java:29)
+Caused by: org.nutz.ioc.IocException: Object 'accountManager' without define! For object [accountManager] - type:[class com.xgame.module.account.dao.AccountManager]
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:203)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.yxy.core.AutoAssemble.checkIocBean(AutoAssemble.java:32)
+	at com.yxy.core.GameContext.init(GameContext.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.nutz.ioc.trigger.MethodEventTrigger.trigger(MethodEventTrigger.java:18)
+	at org.nutz.ioc.weaver.DefaultWeaver.onCreate(DefaultWeaver.java:74)
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:135)
+	... 4 more
+Caused by: org.nutz.ioc.ObjectLoadException: Object 'accountManager' without define!
+	at org.nutz.ioc.loader.combo.ComboIocLoader.load(ComboIocLoader.java:149)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:168)
+	... 15 more
+2016-02-19 17:37:00,999 [INFO] [main] Logs.<clinit> - Nutz is licensed under the Apache License, Version 2.0 .
+Report bugs : https://github.com/nutzam/nutz/issues
+2016-02-19 17:37:01,281 [ERROR] [main] GameMain.main - Game Server start fail!
+org.nutz.lang.born.BorningException: Fail to born 'org.nutz.ioc.loader.json.JsonLoader'
+ by args: [
+  @(config/server.js)] becasue:
+java.lang.RuntimeException: folder or file like '^(.+[.])(js|json)$' no found in config/server.js
+	at org.nutz.lang.born.DynamicConstructorBorning.born(DynamicConstructorBorning.java:21)
+	at org.nutz.lang.born.BornContext.doBorn(BornContext.java:60)
+	at org.nutz.lang.Mirror.born(Mirror.java:967)
+	at org.nutz.ioc.loader.combo.ComboIocLoader.createIocLoader(ComboIocLoader.java:113)
+	at org.nutz.ioc.loader.combo.ComboIocLoader.<init>(ComboIocLoader.java:85)
+	at com.xgame.bootstrap.GameMain.main(GameMain.java:27)
+Caused by: java.lang.RuntimeException: folder or file like '^(.+[.])(js|json)$' no found in config/server.js
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.nutz.lang.born.ConstructorBorning.born(ConstructorBorning.java:17)
+	at org.nutz.lang.born.BornContext.doBorn(BornContext.java:60)
+	at org.nutz.lang.Mirror.born(Mirror.java:967)
+	at org.nutz.lang.Lang.makeThrow(Lang.java:116)
+	at org.nutz.resource.Scans.loadResource(Scans.java:86)
+	at org.nutz.ioc.loader.json.JsonLoader.<init>(JsonLoader.java:41)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.nutz.lang.born.DynamicConstructorBorning.born(DynamicConstructorBorning.java:19)
+	... 5 more
+2016-02-19 17:38:07,685 [INFO] [main] Logs.<clinit> - Nutz is licensed under the Apache License, Version 2.0 .
+Report bugs : https://github.com/nutzam/nutz/issues
+2016-02-19 17:38:07,929 [INFO] [main] Scans.scan - same resource path [onfig/server.js](config/server.js/ F:\GameCore2.0\config\server.js) will be override by [server.js](F:\GameCore2.0\config\server.js)
+2016-02-19 17:38:07,938 [WARN] [main] AnnotationIocLoader.<init> - NONE Annotation-Class found!! Check your configure or report a bug!! packages=[com.wabao.module]
+2016-02-19 17:38:07,941 [INFO] [main] NutIoc.<init> - NutIoc init begin ...
+2016-02-19 17:38:07,943 [INFO] [main] NutIoc.<init> - ... NutIoc init complete
+2016-02-19 17:38:08,043 [INFO] [main] ScheduledManager.<init> - 开启定时器
+2016-02-19 17:38:08,084 [ERROR] [main] GameMain.main - Game Server start fail!
+org.nutz.ioc.IocException: Object 'accountManager' without define! For object [accountManager] - type:[class com.xgame.module.account.dao.AccountManager] FAIL to create Ioc Bean name=[gameContext] 
+beacase [Object 'accountManager' without define! For object [accountManager] - type:[class com.xgame.module.account.dao.AccountManager]]
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:141)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:196)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.xgame.bootstrap.GameMain.main(GameMain.java:29)
+Caused by: org.nutz.ioc.IocException: Object 'accountManager' without define! For object [accountManager] - type:[class com.xgame.module.account.dao.AccountManager]
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:203)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.yxy.core.AutoAssemble.checkIocBean(AutoAssemble.java:32)
+	at com.yxy.core.GameContext.init(GameContext.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.nutz.ioc.trigger.MethodEventTrigger.trigger(MethodEventTrigger.java:18)
+	at org.nutz.ioc.weaver.DefaultWeaver.onCreate(DefaultWeaver.java:74)
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:135)
+	... 4 more
+Caused by: org.nutz.ioc.ObjectLoadException: Object 'accountManager' without define!
+	at org.nutz.ioc.loader.combo.ComboIocLoader.load(ComboIocLoader.java:149)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:168)
+	... 15 more
+2016-02-19 17:38:23,164 [INFO] [main] Logs.<clinit> - Nutz is licensed under the Apache License, Version 2.0 .
+Report bugs : https://github.com/nutzam/nutz/issues
+2016-02-19 17:38:23,405 [INFO] [main] Scans.scan - same resource path [onfig/server.js](config/server.js/ F:\GameCore2.0\config\server.js) will be override by [server.js](F:\GameCore2.0\config\server.js)
+2016-02-19 17:38:23,415 [WARN] [main] AnnotationIocLoader.<init> - NONE Annotation-Class found!! Check your configure or report a bug!! packages=[com.wabao.module]
+2016-02-19 17:38:23,417 [INFO] [main] NutIoc.<init> - NutIoc init begin ...
+2016-02-19 17:38:23,419 [INFO] [main] NutIoc.<init> - ... NutIoc init complete
+2016-02-19 17:38:23,520 [INFO] [main] ScheduledManager.<init> - 开启定时器
+2016-02-19 17:38:23,568 [ERROR] [main] GameMain.main - Game Server start fail!
+org.nutz.ioc.IocException: Object 'accountManager' without define! For object [accountManager] - type:[class com.xgame.module.account.dao.AccountManager] FAIL to create Ioc Bean name=[gameContext] 
+beacase [Object 'accountManager' without define! For object [accountManager] - type:[class com.xgame.module.account.dao.AccountManager]]
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:141)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:196)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.xgame.bootstrap.GameMain.main(GameMain.java:29)
+Caused by: org.nutz.ioc.IocException: Object 'accountManager' without define! For object [accountManager] - type:[class com.xgame.module.account.dao.AccountManager]
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:203)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.yxy.core.AutoAssemble.checkIocBean(AutoAssemble.java:32)
+	at com.yxy.core.GameContext.init(GameContext.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.nutz.ioc.trigger.MethodEventTrigger.trigger(MethodEventTrigger.java:18)
+	at org.nutz.ioc.weaver.DefaultWeaver.onCreate(DefaultWeaver.java:74)
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:135)
+	... 4 more
+Caused by: org.nutz.ioc.ObjectLoadException: Object 'accountManager' without define!
+	at org.nutz.ioc.loader.combo.ComboIocLoader.load(ComboIocLoader.java:149)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:168)
+	... 15 more
+2016-02-19 17:41:29,910 [INFO] [main] Logs.<clinit> - Nutz is licensed under the Apache License, Version 2.0 .
+Report bugs : https://github.com/nutzam/nutz/issues
+2016-02-19 17:41:30,166 [INFO] [main] Scans.scan - same resource path [onfig/server.js](config/server.js/ F:\GameCore2.0\config\server.js) will be override by [server.js](F:\GameCore2.0\config\server.js)
+2016-02-19 17:41:30,175 [WARN] [main] AnnotationIocLoader.<init> - NONE Annotation-Class found!! Check your configure or report a bug!! packages=[com.wabao.module]
+2016-02-19 17:41:30,178 [INFO] [main] NutIoc.<init> - NutIoc init begin ...
+2016-02-19 17:41:30,180 [INFO] [main] NutIoc.<init> - ... NutIoc init complete
+2016-02-19 17:41:30,276 [INFO] [main] ScheduledManager.<init> - 开启定时器
+2016-02-19 17:41:30,314 [ERROR] [main] GameMain.main - Game Server start fail!
+org.nutz.ioc.IocException: Object 'accountManager' without define! For object [accountManager] - type:[class com.xgame.module.account.dao.AccountManager] FAIL to create Ioc Bean name=[gameContext] 
+beacase [Object 'accountManager' without define! For object [accountManager] - type:[class com.xgame.module.account.dao.AccountManager]]
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:141)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:196)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.xgame.bootstrap.GameMain.main(GameMain.java:29)
+Caused by: org.nutz.ioc.IocException: Object 'accountManager' without define! For object [accountManager] - type:[class com.xgame.module.account.dao.AccountManager]
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:203)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.yxy.core.AutoAssemble.checkIocBean(AutoAssemble.java:32)
+	at com.yxy.core.GameContext.init(GameContext.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.nutz.ioc.trigger.MethodEventTrigger.trigger(MethodEventTrigger.java:18)
+	at org.nutz.ioc.weaver.DefaultWeaver.onCreate(DefaultWeaver.java:74)
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:135)
+	... 4 more
+Caused by: org.nutz.ioc.ObjectLoadException: Object 'accountManager' without define!
+	at org.nutz.ioc.loader.combo.ComboIocLoader.load(ComboIocLoader.java:149)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:168)
+	... 15 more
+2016-02-19 17:42:21,025 [INFO] [main] Logs.<clinit> - Nutz is licensed under the Apache License, Version 2.0 .
+Report bugs : https://github.com/nutzam/nutz/issues
+2016-02-19 17:42:21,274 [WARN] [main] AnnotationIocLoader.<init> - NONE Annotation-Class found!! Check your configure or report a bug!! packages=[com.wabao.module]
+2016-02-19 17:42:21,276 [INFO] [main] NutIoc.<init> - NutIoc init begin ...
+2016-02-19 17:42:21,277 [INFO] [main] NutIoc.<init> - ... NutIoc init complete
+2016-02-19 17:42:21,403 [INFO] [main] ScheduledManager.<init> - 开启定时器
+2016-02-19 17:42:21,442 [ERROR] [main] GameMain.main - Game Server start fail!
+org.nutz.ioc.IocException: Object 'logSystem' without define! For object [logSystem] - type:[class com.xgame.module.blog.LogSystem] FAIL to create Ioc Bean name=[gameContext] 
+beacase [Object 'logSystem' without define! For object [logSystem] - type:[class com.xgame.module.blog.LogSystem]]
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:141)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:196)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.xgame.bootstrap.GameMain.main(GameMain.java:29)
+Caused by: org.nutz.ioc.IocException: Object 'logSystem' without define! For object [logSystem] - type:[class com.xgame.module.blog.LogSystem]
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:203)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.yxy.core.AutoAssemble.checkIocBean(AutoAssemble.java:32)
+	at com.yxy.core.GameContext.init(GameContext.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.nutz.ioc.trigger.MethodEventTrigger.trigger(MethodEventTrigger.java:18)
+	at org.nutz.ioc.weaver.DefaultWeaver.onCreate(DefaultWeaver.java:74)
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:135)
+	... 4 more
+Caused by: org.nutz.ioc.ObjectLoadException: Object 'logSystem' without define!
+	at org.nutz.ioc.loader.combo.ComboIocLoader.load(ComboIocLoader.java:149)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:168)
+	... 15 more
+2016-02-19 17:43:28,290 [INFO] [main] Logs.<clinit> - Nutz is licensed under the Apache License, Version 2.0 .
+Report bugs : https://github.com/nutzam/nutz/issues
+2016-02-19 17:43:28,554 [INFO] [main] Scans.scan - same resource path [onfig/server.js](config/server.js/ F:\GameCore2.0\config\server.js) will be override by [server.js](F:\GameCore2.0\config\server.js)
+2016-02-19 17:43:28,562 [WARN] [main] AnnotationIocLoader.<init> - NONE Annotation-Class found!! Check your configure or report a bug!! packages=[com.wabao.module]
+2016-02-19 17:43:28,564 [INFO] [main] NutIoc.<init> - NutIoc init begin ...
+2016-02-19 17:43:28,566 [INFO] [main] NutIoc.<init> - ... NutIoc init complete
+2016-02-19 17:43:28,667 [INFO] [main] ScheduledManager.<init> - 开启定时器
+2016-02-19 17:43:28,705 [ERROR] [main] GameMain.main - Game Server start fail!
+org.nutz.ioc.IocException: Object 'accountManager' without define! For object [accountManager] - type:[class com.xgame.module.account.dao.AccountManager] FAIL to create Ioc Bean name=[gameContext] 
+beacase [Object 'accountManager' without define! For object [accountManager] - type:[class com.xgame.module.account.dao.AccountManager]]
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:141)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:196)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.xgame.bootstrap.GameMain.main(GameMain.java:29)
+Caused by: org.nutz.ioc.IocException: Object 'accountManager' without define! For object [accountManager] - type:[class com.xgame.module.account.dao.AccountManager]
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:203)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.yxy.core.AutoAssemble.checkIocBean(AutoAssemble.java:32)
+	at com.yxy.core.GameContext.init(GameContext.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.nutz.ioc.trigger.MethodEventTrigger.trigger(MethodEventTrigger.java:18)
+	at org.nutz.ioc.weaver.DefaultWeaver.onCreate(DefaultWeaver.java:74)
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:135)
+	... 4 more
+Caused by: org.nutz.ioc.ObjectLoadException: Object 'accountManager' without define!
+	at org.nutz.ioc.loader.combo.ComboIocLoader.load(ComboIocLoader.java:149)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:168)
+	... 15 more
+2016-02-19 17:45:26,077 [INFO] [main] Logs.<clinit> - Nutz is licensed under the Apache License, Version 2.0 .
+Report bugs : https://github.com/nutzam/nutz/issues
+2016-02-19 17:45:26,325 [INFO] [main] Scans.scan - same resource path [onfig/server.js](config/server.js/ F:\GameCore2.0\config\server.js) will be override by [server.js](F:\GameCore2.0\config\server.js)
+2016-02-19 17:45:26,334 [WARN] [main] AnnotationIocLoader.<init> - NONE Annotation-Class found!! Check your configure or report a bug!! packages=[com.wabao.module]
+2016-02-19 17:45:26,337 [INFO] [main] NutIoc.<init> - NutIoc init begin ...
+2016-02-19 17:45:26,340 [INFO] [main] NutIoc.<init> - ... NutIoc init complete
+2016-02-19 17:45:26,442 [INFO] [main] ScheduledManager.<init> - 开启定时器
+2016-02-19 17:45:26,484 [ERROR] [main] GameMain.main - Game Server start fail!
+org.nutz.ioc.IocException: Object 'accountManager' without define! For object [accountManager] - type:[class com.xgame.module.account.dao.AccountManager] FAIL to create Ioc Bean name=[gameContext] 
+beacase [Object 'accountManager' without define! For object [accountManager] - type:[class com.xgame.module.account.dao.AccountManager]]
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:141)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:196)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.xgame.bootstrap.GameMain.main(GameMain.java:29)
+Caused by: org.nutz.ioc.IocException: Object 'accountManager' without define! For object [accountManager] - type:[class com.xgame.module.account.dao.AccountManager]
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:203)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.yxy.core.AutoAssemble.checkIocBean(AutoAssemble.java:32)
+	at com.yxy.core.GameContext.init(GameContext.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.nutz.ioc.trigger.MethodEventTrigger.trigger(MethodEventTrigger.java:18)
+	at org.nutz.ioc.weaver.DefaultWeaver.onCreate(DefaultWeaver.java:74)
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:135)
+	... 4 more
+Caused by: org.nutz.ioc.ObjectLoadException: Object 'accountManager' without define!
+	at org.nutz.ioc.loader.combo.ComboIocLoader.load(ComboIocLoader.java:149)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:168)
+	... 15 more
+2016-02-19 17:45:36,152 [INFO] [main] Logs.<clinit> - Nutz is licensed under the Apache License, Version 2.0 .
+Report bugs : https://github.com/nutzam/nutz/issues
+2016-02-19 17:45:36,403 [INFO] [main] Scans.scan - same resource path [onfig/server.js](config/server.js/ F:\GameCore2.0\config\server.js) will be override by [server.js](F:\GameCore2.0\config\server.js)
+2016-02-19 17:45:36,416 [WARN] [main] AnnotationIocLoader.<init> - NONE Annotation-Class found!! Check your configure or report a bug!! packages=[com.wabao.module]
+2016-02-19 17:45:36,419 [INFO] [main] NutIoc.<init> - NutIoc init begin ...
+2016-02-19 17:45:36,427 [INFO] [main] NutIoc.<init> - ... NutIoc init complete
+2016-02-19 17:45:36,520 [INFO] [main] ScheduledManager.<init> - 开启定时器
+2016-02-19 17:45:36,558 [ERROR] [main] GameMain.main - Game Server start fail!
+org.nutz.ioc.IocException: Object 'accountManager' without define! For object [accountManager] - type:[class com.xgame.module.account.dao.AccountManager] FAIL to create Ioc Bean name=[gameContext] 
+beacase [Object 'accountManager' without define! For object [accountManager] - type:[class com.xgame.module.account.dao.AccountManager]]
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:141)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:196)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.xgame.bootstrap.GameMain.main(GameMain.java:30)
+Caused by: org.nutz.ioc.IocException: Object 'accountManager' without define! For object [accountManager] - type:[class com.xgame.module.account.dao.AccountManager]
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:203)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.yxy.core.AutoAssemble.checkIocBean(AutoAssemble.java:32)
+	at com.yxy.core.GameContext.init(GameContext.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.nutz.ioc.trigger.MethodEventTrigger.trigger(MethodEventTrigger.java:18)
+	at org.nutz.ioc.weaver.DefaultWeaver.onCreate(DefaultWeaver.java:74)
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:135)
+	... 4 more
+Caused by: org.nutz.ioc.ObjectLoadException: Object 'accountManager' without define!
+	at org.nutz.ioc.loader.combo.ComboIocLoader.load(ComboIocLoader.java:149)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:168)
+	... 15 more
+2016-02-19 17:46:33,413 [INFO] [main] Logs.<clinit> - Nutz is licensed under the Apache License, Version 2.0 .
+Report bugs : https://github.com/nutzam/nutz/issues
+2016-02-19 17:46:33,656 [INFO] [main] Scans.scan - same resource path [onfig/server.js](config/server.js/ F:\GameCore2.0\config\server.js) will be override by [server.js](F:\GameCore2.0\config\server.js)
+2016-02-19 17:46:33,674 [WARN] [main] AnnotationIocLoader.<init> - NONE Annotation-Class found!! Check your configure or report a bug!! packages=[com.wabao.module]
+2016-02-19 17:46:33,676 [INFO] [main] NutIoc.<init> - NutIoc init begin ...
+2016-02-19 17:46:33,677 [INFO] [main] NutIoc.<init> - ... NutIoc init complete
+2016-02-19 17:46:33,792 [INFO] [main] ScheduledManager.<init> - 开启定时器
+2016-02-19 17:46:33,834 [ERROR] [main] GameMain.main - Game Server start fail!
+org.nutz.ioc.IocException: Object 'avatarSystem' without define! For object [avatarSystem] - type:[class com.xgame.module.avatar.AvatarSystem] FAIL to create Ioc Bean name=[gameContext] 
+beacase [Object 'avatarSystem' without define! For object [avatarSystem] - type:[class com.xgame.module.avatar.AvatarSystem]]
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:141)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:196)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.xgame.bootstrap.GameMain.main(GameMain.java:29)
+Caused by: org.nutz.ioc.IocException: Object 'avatarSystem' without define! For object [avatarSystem] - type:[class com.xgame.module.avatar.AvatarSystem]
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:203)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.yxy.core.AutoAssemble.checkIocBean(AutoAssemble.java:32)
+	at com.yxy.core.GameContext.init(GameContext.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.nutz.ioc.trigger.MethodEventTrigger.trigger(MethodEventTrigger.java:18)
+	at org.nutz.ioc.weaver.DefaultWeaver.onCreate(DefaultWeaver.java:74)
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:135)
+	... 4 more
+Caused by: org.nutz.ioc.ObjectLoadException: Object 'avatarSystem' without define!
+	at org.nutz.ioc.loader.combo.ComboIocLoader.load(ComboIocLoader.java:149)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:168)
+	... 15 more
+2016-02-19 17:47:08,106 [INFO] [main] Logs.<clinit> - Nutz is licensed under the Apache License, Version 2.0 .
+Report bugs : https://github.com/nutzam/nutz/issues
+2016-02-19 17:47:08,401 [ERROR] [main] GameMain.main - Game Server start fail!
+org.nutz.lang.born.BorningException: Fail to born 'org.nutz.ioc.loader.json.JsonLoader'
+ by args: [
+  @(config/server.js)] becasue:
+java.lang.RuntimeException: folder or file like '^(.+[.])(js|json)$' no found in config/server.js
+	at org.nutz.lang.born.DynamicConstructorBorning.born(DynamicConstructorBorning.java:21)
+	at org.nutz.lang.born.BornContext.doBorn(BornContext.java:60)
+	at org.nutz.lang.Mirror.born(Mirror.java:967)
+	at org.nutz.ioc.loader.combo.ComboIocLoader.createIocLoader(ComboIocLoader.java:113)
+	at org.nutz.ioc.loader.combo.ComboIocLoader.<init>(ComboIocLoader.java:85)
+	at com.xgame.bootstrap.GameMain.main(GameMain.java:27)
+Caused by: java.lang.RuntimeException: folder or file like '^(.+[.])(js|json)$' no found in config/server.js
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.nutz.lang.born.ConstructorBorning.born(ConstructorBorning.java:17)
+	at org.nutz.lang.born.BornContext.doBorn(BornContext.java:60)
+	at org.nutz.lang.Mirror.born(Mirror.java:967)
+	at org.nutz.lang.Lang.makeThrow(Lang.java:116)
+	at org.nutz.resource.Scans.loadResource(Scans.java:86)
+	at org.nutz.ioc.loader.json.JsonLoader.<init>(JsonLoader.java:41)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.nutz.lang.born.DynamicConstructorBorning.born(DynamicConstructorBorning.java:19)
+	... 5 more
+2016-02-19 17:47:39,623 [INFO] [main] Logs.<clinit> - Nutz is licensed under the Apache License, Version 2.0 .
+Report bugs : https://github.com/nutzam/nutz/issues
+2016-02-19 17:47:39,894 [ERROR] [main] GameMain.main - Game Server start fail!
+org.nutz.lang.born.BorningException: Fail to born 'org.nutz.ioc.loader.json.JsonLoader'
+ by args: [
+  @(config/server.js)] becasue:
+java.lang.RuntimeException: folder or file like '^(.+[.])(js|json)$' no found in config/server.js
+	at org.nutz.lang.born.DynamicConstructorBorning.born(DynamicConstructorBorning.java:21)
+	at org.nutz.lang.born.BornContext.doBorn(BornContext.java:60)
+	at org.nutz.lang.Mirror.born(Mirror.java:967)
+	at org.nutz.ioc.loader.combo.ComboIocLoader.createIocLoader(ComboIocLoader.java:113)
+	at org.nutz.ioc.loader.combo.ComboIocLoader.<init>(ComboIocLoader.java:85)
+	at com.xgame.bootstrap.GameMain.main(GameMain.java:27)
+Caused by: java.lang.RuntimeException: folder or file like '^(.+[.])(js|json)$' no found in config/server.js
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.nutz.lang.born.ConstructorBorning.born(ConstructorBorning.java:17)
+	at org.nutz.lang.born.BornContext.doBorn(BornContext.java:60)
+	at org.nutz.lang.Mirror.born(Mirror.java:967)
+	at org.nutz.lang.Lang.makeThrow(Lang.java:116)
+	at org.nutz.resource.Scans.loadResource(Scans.java:86)
+	at org.nutz.ioc.loader.json.JsonLoader.<init>(JsonLoader.java:41)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.nutz.lang.born.DynamicConstructorBorning.born(DynamicConstructorBorning.java:19)
+	... 5 more
+2016-02-19 17:48:28,559 [INFO] [main] Logs.<clinit> - Nutz is licensed under the Apache License, Version 2.0 .
+Report bugs : https://github.com/nutzam/nutz/issues
+2016-02-19 17:48:28,848 [ERROR] [main] GameMain.main - Game Server start fail!
+org.nutz.lang.born.BorningException: Fail to born 'org.nutz.ioc.loader.json.JsonLoader'
+ by args: [
+  @(../config/server.js)] becasue:
+java.lang.RuntimeException: folder or file like '^(.+[.])(js|json)$' no found in ../config/server.js
+	at org.nutz.lang.born.DynamicConstructorBorning.born(DynamicConstructorBorning.java:21)
+	at org.nutz.lang.born.BornContext.doBorn(BornContext.java:60)
+	at org.nutz.lang.Mirror.born(Mirror.java:967)
+	at org.nutz.ioc.loader.combo.ComboIocLoader.createIocLoader(ComboIocLoader.java:113)
+	at org.nutz.ioc.loader.combo.ComboIocLoader.<init>(ComboIocLoader.java:85)
+	at com.xgame.bootstrap.GameMain.main(GameMain.java:28)
+Caused by: java.lang.RuntimeException: folder or file like '^(.+[.])(js|json)$' no found in ../config/server.js
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.nutz.lang.born.ConstructorBorning.born(ConstructorBorning.java:17)
+	at org.nutz.lang.born.BornContext.doBorn(BornContext.java:60)
+	at org.nutz.lang.Mirror.born(Mirror.java:967)
+	at org.nutz.lang.Lang.makeThrow(Lang.java:116)
+	at org.nutz.resource.Scans.loadResource(Scans.java:86)
+	at org.nutz.ioc.loader.json.JsonLoader.<init>(JsonLoader.java:41)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.nutz.lang.born.DynamicConstructorBorning.born(DynamicConstructorBorning.java:19)
+	... 5 more
+2016-02-19 17:49:05,187 [INFO] [main] Logs.<clinit> - Nutz is licensed under the Apache License, Version 2.0 .
+Report bugs : https://github.com/nutzam/nutz/issues
+2016-02-19 17:49:05,471 [ERROR] [main] GameMain.main - Game Server start fail!
+org.nutz.lang.born.BorningException: Fail to born 'org.nutz.ioc.loader.json.JsonLoader'
+ by args: [
+  @(../../config/server.js)] becasue:
+java.lang.RuntimeException: folder or file like '^(.+[.])(js|json)$' no found in ../../config/server.js
+	at org.nutz.lang.born.DynamicConstructorBorning.born(DynamicConstructorBorning.java:21)
+	at org.nutz.lang.born.BornContext.doBorn(BornContext.java:60)
+	at org.nutz.lang.Mirror.born(Mirror.java:967)
+	at org.nutz.ioc.loader.combo.ComboIocLoader.createIocLoader(ComboIocLoader.java:113)
+	at org.nutz.ioc.loader.combo.ComboIocLoader.<init>(ComboIocLoader.java:85)
+	at com.xgame.bootstrap.GameMain.main(GameMain.java:28)
+Caused by: java.lang.RuntimeException: folder or file like '^(.+[.])(js|json)$' no found in ../../config/server.js
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.nutz.lang.born.ConstructorBorning.born(ConstructorBorning.java:17)
+	at org.nutz.lang.born.BornContext.doBorn(BornContext.java:60)
+	at org.nutz.lang.Mirror.born(Mirror.java:967)
+	at org.nutz.lang.Lang.makeThrow(Lang.java:116)
+	at org.nutz.resource.Scans.loadResource(Scans.java:86)
+	at org.nutz.ioc.loader.json.JsonLoader.<init>(JsonLoader.java:41)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.nutz.lang.born.DynamicConstructorBorning.born(DynamicConstructorBorning.java:19)
+	... 5 more
+2016-02-19 17:49:13,060 [INFO] [main] Logs.<clinit> - Nutz is licensed under the Apache License, Version 2.0 .
+Report bugs : https://github.com/nutzam/nutz/issues
+2016-02-19 17:49:13,344 [ERROR] [main] GameMain.main - Game Server start fail!
+org.nutz.lang.born.BorningException: Fail to born 'org.nutz.ioc.loader.json.JsonLoader'
+ by args: [
+  @(../../../config/server.js)] becasue:
+java.lang.RuntimeException: folder or file like '^(.+[.])(js|json)$' no found in ../../../config/server.js
+	at org.nutz.lang.born.DynamicConstructorBorning.born(DynamicConstructorBorning.java:21)
+	at org.nutz.lang.born.BornContext.doBorn(BornContext.java:60)
+	at org.nutz.lang.Mirror.born(Mirror.java:967)
+	at org.nutz.ioc.loader.combo.ComboIocLoader.createIocLoader(ComboIocLoader.java:113)
+	at org.nutz.ioc.loader.combo.ComboIocLoader.<init>(ComboIocLoader.java:85)
+	at com.xgame.bootstrap.GameMain.main(GameMain.java:28)
+Caused by: java.lang.RuntimeException: folder or file like '^(.+[.])(js|json)$' no found in ../../../config/server.js
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.nutz.lang.born.ConstructorBorning.born(ConstructorBorning.java:17)
+	at org.nutz.lang.born.BornContext.doBorn(BornContext.java:60)
+	at org.nutz.lang.Mirror.born(Mirror.java:967)
+	at org.nutz.lang.Lang.makeThrow(Lang.java:116)
+	at org.nutz.resource.Scans.loadResource(Scans.java:86)
+	at org.nutz.ioc.loader.json.JsonLoader.<init>(JsonLoader.java:41)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.nutz.lang.born.DynamicConstructorBorning.born(DynamicConstructorBorning.java:19)
+	... 5 more
+2016-02-19 17:49:54,395 [INFO] [main] Logs.<clinit> - Nutz is licensed under the Apache License, Version 2.0 .
+Report bugs : https://github.com/nutzam/nutz/issues
+2016-02-19 17:49:54,688 [ERROR] [main] GameMain.main - Game Server start fail!
+org.nutz.lang.born.BorningException: Fail to born 'org.nutz.ioc.loader.json.JsonLoader'
+ by args: [
+  @(config/server.js)] becasue:
+java.lang.RuntimeException: folder or file like '^(.+[.])(js|json)$' no found in config/server.js
+	at org.nutz.lang.born.DynamicConstructorBorning.born(DynamicConstructorBorning.java:21)
+	at org.nutz.lang.born.BornContext.doBorn(BornContext.java:60)
+	at org.nutz.lang.Mirror.born(Mirror.java:967)
+	at org.nutz.ioc.loader.combo.ComboIocLoader.createIocLoader(ComboIocLoader.java:113)
+	at org.nutz.ioc.loader.combo.ComboIocLoader.<init>(ComboIocLoader.java:85)
+	at com.xgame.bootstrap.GameMain.main(GameMain.java:27)
+Caused by: java.lang.RuntimeException: folder or file like '^(.+[.])(js|json)$' no found in config/server.js
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.nutz.lang.born.ConstructorBorning.born(ConstructorBorning.java:17)
+	at org.nutz.lang.born.BornContext.doBorn(BornContext.java:60)
+	at org.nutz.lang.Mirror.born(Mirror.java:967)
+	at org.nutz.lang.Lang.makeThrow(Lang.java:116)
+	at org.nutz.resource.Scans.loadResource(Scans.java:86)
+	at org.nutz.ioc.loader.json.JsonLoader.<init>(JsonLoader.java:41)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.nutz.lang.born.DynamicConstructorBorning.born(DynamicConstructorBorning.java:19)
+	... 5 more
+2016-02-19 17:50:31,088 [INFO] [main] Logs.<clinit> - Nutz is licensed under the Apache License, Version 2.0 .
+Report bugs : https://github.com/nutzam/nutz/issues
+2016-02-19 17:50:31,382 [ERROR] [main] GameMain.main - Game Server start fail!
+org.nutz.lang.born.BorningException: Fail to born 'org.nutz.ioc.loader.json.JsonLoader'
+ by args: [
+  @(config/server.js)] becasue:
+java.lang.RuntimeException: folder or file like '^(.+[.])(js|json)$' no found in config/server.js
+	at org.nutz.lang.born.DynamicConstructorBorning.born(DynamicConstructorBorning.java:21)
+	at org.nutz.lang.born.BornContext.doBorn(BornContext.java:60)
+	at org.nutz.lang.Mirror.born(Mirror.java:967)
+	at org.nutz.ioc.loader.combo.ComboIocLoader.createIocLoader(ComboIocLoader.java:113)
+	at org.nutz.ioc.loader.combo.ComboIocLoader.<init>(ComboIocLoader.java:85)
+	at com.xgame.bootstrap.GameMain.main(GameMain.java:27)
+Caused by: java.lang.RuntimeException: folder or file like '^(.+[.])(js|json)$' no found in config/server.js
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.nutz.lang.born.ConstructorBorning.born(ConstructorBorning.java:17)
+	at org.nutz.lang.born.BornContext.doBorn(BornContext.java:60)
+	at org.nutz.lang.Mirror.born(Mirror.java:967)
+	at org.nutz.lang.Lang.makeThrow(Lang.java:116)
+	at org.nutz.resource.Scans.loadResource(Scans.java:86)
+	at org.nutz.ioc.loader.json.JsonLoader.<init>(JsonLoader.java:41)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.nutz.lang.born.DynamicConstructorBorning.born(DynamicConstructorBorning.java:19)
+	... 5 more
+2016-02-19 17:50:47,103 [INFO] [main] Logs.<clinit> - Nutz is licensed under the Apache License, Version 2.0 .
+Report bugs : https://github.com/nutzam/nutz/issues
+2016-02-19 17:50:47,372 [ERROR] [main] GameMain.main - Game Server start fail!
+org.nutz.lang.born.BorningException: Fail to born 'org.nutz.ioc.loader.json.JsonLoader'
+ by args: [
+  @(config/server.js)] becasue:
+java.lang.RuntimeException: folder or file like '^(.+[.])(js|json)$' no found in config/server.js
+	at org.nutz.lang.born.DynamicConstructorBorning.born(DynamicConstructorBorning.java:21)
+	at org.nutz.lang.born.BornContext.doBorn(BornContext.java:60)
+	at org.nutz.lang.Mirror.born(Mirror.java:967)
+	at org.nutz.ioc.loader.combo.ComboIocLoader.createIocLoader(ComboIocLoader.java:113)
+	at org.nutz.ioc.loader.combo.ComboIocLoader.<init>(ComboIocLoader.java:85)
+	at com.xgame.bootstrap.GameMain.main(GameMain.java:27)
+Caused by: java.lang.RuntimeException: folder or file like '^(.+[.])(js|json)$' no found in config/server.js
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.nutz.lang.born.ConstructorBorning.born(ConstructorBorning.java:17)
+	at org.nutz.lang.born.BornContext.doBorn(BornContext.java:60)
+	at org.nutz.lang.Mirror.born(Mirror.java:967)
+	at org.nutz.lang.Lang.makeThrow(Lang.java:116)
+	at org.nutz.resource.Scans.loadResource(Scans.java:86)
+	at org.nutz.ioc.loader.json.JsonLoader.<init>(JsonLoader.java:41)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.nutz.lang.born.DynamicConstructorBorning.born(DynamicConstructorBorning.java:19)
+	... 5 more
+2016-02-19 17:51:06,601 [INFO] [main] Logs.<clinit> - Nutz is licensed under the Apache License, Version 2.0 .
+Report bugs : https://github.com/nutzam/nutz/issues
+2016-02-19 17:51:06,851 [WARN] [main] AnnotationIocLoader.<init> - NONE Annotation-Class found!! Check your configure or report a bug!! packages=[com.wabao.module]
+2016-02-19 17:51:06,854 [INFO] [main] NutIoc.<init> - NutIoc init begin ...
+2016-02-19 17:51:06,856 [INFO] [main] NutIoc.<init> - ... NutIoc init complete
+2016-02-19 17:51:06,971 [INFO] [main] ScheduledManager.<init> - 开启定时器
+2016-02-19 17:51:07,010 [ERROR] [main] GameMain.main - Game Server start fail!
+org.nutz.ioc.IocException: Object 'logSystem' without define! For object [logSystem] - type:[class com.xgame.module.blog.LogSystem] FAIL to create Ioc Bean name=[gameContext] 
+beacase [Object 'logSystem' without define! For object [logSystem] - type:[class com.xgame.module.blog.LogSystem]]
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:141)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:196)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.xgame.bootstrap.GameMain.main(GameMain.java:29)
+Caused by: org.nutz.ioc.IocException: Object 'logSystem' without define! For object [logSystem] - type:[class com.xgame.module.blog.LogSystem]
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:203)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.yxy.core.AutoAssemble.checkIocBean(AutoAssemble.java:32)
+	at com.yxy.core.GameContext.init(GameContext.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.nutz.ioc.trigger.MethodEventTrigger.trigger(MethodEventTrigger.java:18)
+	at org.nutz.ioc.weaver.DefaultWeaver.onCreate(DefaultWeaver.java:74)
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:135)
+	... 4 more
+Caused by: org.nutz.ioc.ObjectLoadException: Object 'logSystem' without define!
+	at org.nutz.ioc.loader.combo.ComboIocLoader.load(ComboIocLoader.java:149)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:168)
+	... 15 more
+2016-02-19 17:55:18,431 [INFO] [main] Logs.<clinit> - Nutz is licensed under the Apache License, Version 2.0 .
+Report bugs : https://github.com/nutzam/nutz/issues
+2016-02-19 17:55:18,683 [WARN] [main] AnnotationIocLoader.<init> - NONE Annotation-Class found!! Check your configure or report a bug!! packages=[com.wabao.module]
+2016-02-19 17:55:18,685 [INFO] [main] NutIoc.<init> - NutIoc init begin ...
+2016-02-19 17:55:18,687 [INFO] [main] NutIoc.<init> - ... NutIoc init complete
+2016-02-19 17:55:18,795 [INFO] [main] ScheduledManager.<init> - 开启定时器
+2016-02-19 17:55:18,832 [ERROR] [main] GameMain.main - Game Server start fail!
+org.nutz.ioc.IocException: Object 'logSystem' without define! For object [logSystem] - type:[class com.xgame.module.blog.LogSystem] FAIL to create Ioc Bean name=[gameContext] 
+beacase [Object 'logSystem' without define! For object [logSystem] - type:[class com.xgame.module.blog.LogSystem]]
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:141)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:196)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.xgame.bootstrap.GameMain.main(GameMain.java:29)
+Caused by: org.nutz.ioc.IocException: Object 'logSystem' without define! For object [logSystem] - type:[class com.xgame.module.blog.LogSystem]
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:203)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.yxy.core.AutoAssemble.checkIocBean(AutoAssemble.java:32)
+	at com.yxy.core.GameContext.init(GameContext.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.nutz.ioc.trigger.MethodEventTrigger.trigger(MethodEventTrigger.java:18)
+	at org.nutz.ioc.weaver.DefaultWeaver.onCreate(DefaultWeaver.java:74)
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:135)
+	... 4 more
+Caused by: org.nutz.ioc.ObjectLoadException: Object 'logSystem' without define!
+	at org.nutz.ioc.loader.combo.ComboIocLoader.load(ComboIocLoader.java:149)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:168)
+	... 15 more
+2016-02-19 17:58:27,159 [INFO] [main] Logs.<clinit> - Nutz is licensed under the Apache License, Version 2.0 .
+Report bugs : https://github.com/nutzam/nutz/issues
+2016-02-19 17:58:27,428 [WARN] [main] AnnotationIocLoader.<init> - NONE Annotation-Class found!! Check your configure or report a bug!! packages=[com.wabao.module]
+2016-02-19 17:58:27,432 [INFO] [main] NutIoc.<init> - NutIoc init begin ...
+2016-02-19 17:58:27,434 [INFO] [main] NutIoc.<init> - ... NutIoc init complete
+2016-02-19 17:58:27,569 [INFO] [main] ScheduledManager.<init> - 开启定时器
+2016-02-19 18:00:22,404 [ERROR] [main] GameMain.main - Game Server start fail!
+org.nutz.ioc.IocException: Object 'avatarSystem' without define! For object [avatarSystem] - type:[class com.xgame.module.avatar.AvatarSystem] FAIL to create Ioc Bean name=[gameContext] 
+beacase [Object 'avatarSystem' without define! For object [avatarSystem] - type:[class com.xgame.module.avatar.AvatarSystem]]
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:141)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:196)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.xgame.bootstrap.GameMain.main(GameMain.java:29)
+Caused by: org.nutz.ioc.IocException: Object 'avatarSystem' without define! For object [avatarSystem] - type:[class com.xgame.module.avatar.AvatarSystem]
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:203)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.yxy.core.AutoAssemble.checkIocBean(AutoAssemble.java:32)
+	at com.yxy.core.GameContext.init(GameContext.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.nutz.ioc.trigger.MethodEventTrigger.trigger(MethodEventTrigger.java:18)
+	at org.nutz.ioc.weaver.DefaultWeaver.onCreate(DefaultWeaver.java:74)
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:135)
+	... 4 more
+Caused by: org.nutz.ioc.ObjectLoadException: Object 'avatarSystem' without define!
+	at org.nutz.ioc.loader.combo.ComboIocLoader.load(ComboIocLoader.java:149)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:168)
+	... 15 more
+2016-02-19 18:01:24,240 [INFO] [main] Logs.<clinit> - Nutz is licensed under the Apache License, Version 2.0 .
+Report bugs : https://github.com/nutzam/nutz/issues
+2016-02-19 18:01:24,748 [INFO] [main] AnnotationIocLoader.<init> - Scan complete ! Found 8 classes in 1 base-packages!
+beans = ["avatarSystem", "accountSystem", "accountManager", "logSystem", "accountDao", "avatarManager", "logDao", "avatarDao"]
+2016-02-19 18:01:24,751 [INFO] [main] NutIoc.<init> - NutIoc init begin ...
+2016-02-19 18:01:24,753 [INFO] [main] NutIoc.<init> - ... NutIoc init complete
+2016-02-19 18:01:24,806 [INFO] [main] ScheduledManager.<init> - 开启定时器
+2016-02-19 18:01:24,886 [INFO] [main] NutFilePool.<init> - Init file-pool by: C:\Users\Administrator/.nutz/tmp/dao/ [200000]
+2016-02-19 18:01:24,891 [INFO] [main] NutFilePool.<init> - file-pool.cursor: 0
+2016-02-19 18:01:24,899 [INFO] [main] Jdbcs.getExpert - Get Connection from DataSource for JdbcExpert
+2016-02-19 18:01:25,205 [ERROR] [main] DruidDataSource.init - dataSource init error
+java.sql.SQLException: com.mysql.jdbc.Driver
+	at com.alibaba.druid.util.JdbcUtils.createDriver(JdbcUtils.java:528)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:597)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:934)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:930)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:102)
+	at org.nutz.trans.Trans.getConnectionAuto(Trans.java:263)
+	at org.nutz.dao.jdbc.Jdbcs.getExpert(Jdbcs.java:101)
+	at org.nutz.dao.impl.DaoSupport.setDataSource(DaoSupport.java:162)
+	at org.nutz.dao.impl.NutDao.<init>(NutDao.java:110)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.nutz.lang.born.ConstructorBorning.born(ConstructorBorning.java:17)
+	at org.nutz.ioc.weaver.DefaultWeaver.born(DefaultWeaver.java:67)
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:112)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:196)
+	at org.nutz.ioc.val.ReferValue.get(ReferValue.java:24)
+	at org.nutz.ioc.weaver.FieldInjector.inject(FieldInjector.java:31)
+	at org.nutz.ioc.weaver.DefaultWeaver.fill(DefaultWeaver.java:56)
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:132)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:196)
+	at org.nutz.ioc.val.ReferValue.get(ReferValue.java:24)
+	at org.nutz.ioc.weaver.FieldInjector.inject(FieldInjector.java:31)
+	at org.nutz.ioc.weaver.DefaultWeaver.fill(DefaultWeaver.java:56)
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:132)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:196)
+	at org.nutz.ioc.val.ReferValue.get(ReferValue.java:24)
+	at org.nutz.ioc.weaver.FieldInjector.inject(FieldInjector.java:31)
+	at org.nutz.ioc.weaver.DefaultWeaver.fill(DefaultWeaver.java:56)
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:132)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:196)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.yxy.core.AutoAssemble.checkIocBean(AutoAssemble.java:32)
+	at com.yxy.core.GameContext.init(GameContext.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.nutz.ioc.trigger.MethodEventTrigger.trigger(MethodEventTrigger.java:18)
+	at org.nutz.ioc.weaver.DefaultWeaver.onCreate(DefaultWeaver.java:74)
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:135)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:196)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.xgame.bootstrap.GameMain.main(GameMain.java:29)
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at com.alibaba.druid.util.JdbcUtils.createDriver(JdbcUtils.java:526)
+	... 46 more
+2016-02-19 18:01:25,210 [INFO] [main] DruidDataSource.init - {dataSource-1} inited
+2016-02-19 18:01:25,212 [ERROR] [main] GameMain.main - Game Server start fail!
+org.nutz.ioc.IocException: Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver] FAIL to create Ioc Bean name=[avatarDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver]] FAIL to create Ioc Bean name=[avatarManager] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver] FAIL to create Ioc Bean name=[avatarDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver]]] FAIL to create Ioc Bean name=[avatarSystem] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver] FAIL to create Ioc Bean name=[avatarDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver]] FAIL to create Ioc Bean name=[avatarManager] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver] FAIL to create Ioc Bean name=[avatarDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver]]]] FAIL to create Ioc Bean name=[gameContext] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver] FAIL to create Ioc Bean name=[avatarDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver]] FAIL to create Ioc Bean name=[avatarManager] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver] FAIL to create Ioc Bean name=[avatarDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver]]] FAIL to create Ioc Bean name=[avatarSystem] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver] FAIL to create Ioc Bean name=[avatarDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver]] FAIL to create Ioc Bean name=[avatarManager] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver] FAIL to create Ioc Bean name=[avatarDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver]]]]]
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:141)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:196)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.xgame.bootstrap.GameMain.main(GameMain.java:29)
+Caused by: org.nutz.ioc.IocException: Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver] FAIL to create Ioc Bean name=[avatarDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver]] FAIL to create Ioc Bean name=[avatarManager] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver] FAIL to create Ioc Bean name=[avatarDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver]]] FAIL to create Ioc Bean name=[avatarSystem] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver] FAIL to create Ioc Bean name=[avatarDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver]] FAIL to create Ioc Bean name=[avatarManager] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver] FAIL to create Ioc Bean name=[avatarDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver]]]]
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:141)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:196)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.yxy.core.AutoAssemble.checkIocBean(AutoAssemble.java:32)
+	at com.yxy.core.GameContext.init(GameContext.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.nutz.ioc.trigger.MethodEventTrigger.trigger(MethodEventTrigger.java:18)
+	at org.nutz.ioc.weaver.DefaultWeaver.onCreate(DefaultWeaver.java:74)
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:135)
+	... 4 more
+Caused by: org.nutz.ioc.IocException: Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver] FAIL to create Ioc Bean name=[avatarDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver]] FAIL to create Ioc Bean name=[avatarManager] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver] FAIL to create Ioc Bean name=[avatarDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver]]]
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:141)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:196)
+	at org.nutz.ioc.val.ReferValue.get(ReferValue.java:24)
+	at org.nutz.ioc.weaver.FieldInjector.inject(FieldInjector.java:31)
+	at org.nutz.ioc.weaver.DefaultWeaver.fill(DefaultWeaver.java:56)
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:132)
+	... 16 more
+Caused by: org.nutz.ioc.IocException: Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver] FAIL to create Ioc Bean name=[avatarDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver]]
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:141)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:196)
+	at org.nutz.ioc.val.ReferValue.get(ReferValue.java:24)
+	at org.nutz.ioc.weaver.FieldInjector.inject(FieldInjector.java:31)
+	at org.nutz.ioc.weaver.DefaultWeaver.fill(DefaultWeaver.java:56)
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:132)
+	... 21 more
+Caused by: org.nutz.ioc.IocException: Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver FAIL to create Ioc Bean name=[gameDao] 
+beacase [Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver]
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:141)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:196)
+	at org.nutz.ioc.val.ReferValue.get(ReferValue.java:24)
+	at org.nutz.ioc.weaver.FieldInjector.inject(FieldInjector.java:31)
+	at org.nutz.ioc.weaver.DefaultWeaver.fill(DefaultWeaver.java:56)
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:132)
+	... 26 more
+Caused by: org.nutz.lang.born.BorningException: Fail to born 'org.nutz.dao.impl.NutDao'
+ by args: [
+  @({
+	CreateTime:"2016-02-19 18:01:24",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})] becasue:
+java.sql.SQLException: com.mysql.jdbc.Driver
+	at org.nutz.lang.born.ConstructorBorning.born(ConstructorBorning.java:19)
+	at org.nutz.ioc.weaver.DefaultWeaver.born(DefaultWeaver.java:67)
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:112)
+	... 31 more
+Caused by: java.sql.SQLException: com.mysql.jdbc.Driver
+	at com.alibaba.druid.util.JdbcUtils.createDriver(JdbcUtils.java:528)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:597)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:934)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:930)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:102)
+	at org.nutz.trans.Trans.getConnectionAuto(Trans.java:263)
+	at org.nutz.dao.jdbc.Jdbcs.getExpert(Jdbcs.java:101)
+	at org.nutz.dao.impl.DaoSupport.setDataSource(DaoSupport.java:162)
+	at org.nutz.dao.impl.NutDao.<init>(NutDao.java:110)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.nutz.lang.born.ConstructorBorning.born(ConstructorBorning.java:17)
+	... 33 more
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at com.alibaba.druid.util.JdbcUtils.createDriver(JdbcUtils.java:526)
+	... 46 more
+2016-02-19 18:02:50,506 [INFO] [main] Logs.<clinit> - Nutz is licensed under the Apache License, Version 2.0 .
+Report bugs : https://github.com/nutzam/nutz/issues
+2016-02-19 18:02:50,935 [INFO] [main] AnnotationIocLoader.<init> - Scan complete ! Found 8 classes in 1 base-packages!
+beans = ["accountSystem", "avatarSystem", "accountManager", "logSystem", "accountDao", "avatarManager", "logDao", "avatarDao"]
+2016-02-19 18:02:50,937 [INFO] [main] NutIoc.<init> - NutIoc init begin ...
+2016-02-19 18:02:50,940 [INFO] [main] NutIoc.<init> - ... NutIoc init complete
+2016-02-19 18:02:50,996 [INFO] [main] ScheduledManager.<init> - 开启定时器
+2016-02-19 18:02:51,077 [INFO] [main] NutFilePool.<init> - Init file-pool by: C:\Users\Administrator/.nutz/tmp/dao/ [200000]
+2016-02-19 18:02:51,080 [INFO] [main] NutFilePool.<init> - file-pool.cursor: 0
+2016-02-19 18:02:51,089 [INFO] [main] Jdbcs.getExpert - Get Connection from DataSource for JdbcExpert
+2016-02-19 18:02:51,557 [INFO] [main] DruidDataSource.init - {dataSource-1} inited
+2016-02-19 18:02:51,960 [INFO] [main] Jdbcs.getExpert - Get Connection from DataSource for JdbcExpert
+2016-02-19 18:02:51,974 [INFO] [main] DruidDataSource.init - {dataSource-2} inited
+2016-02-19 18:02:52,024 [INFO] [main] AvatarManager.init - 全服角色数:0
+2016-02-19 18:02:52,026 [INFO] [main] Jdbcs.getExpert - Get Connection from DataSource for JdbcExpert
+2016-02-19 18:02:52,057 [INFO] [main] DruidDataSource.init - {dataSource-3} inited
+2016-02-19 18:02:52,075 [ERROR] [main] GameMain.main - Game Server start fail!
+org.nutz.ioc.IocException: !Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist FAIL to create Ioc Bean name=[avatarSystem] 
+beacase [!Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist] FAIL to create Ioc Bean name=[accountSystem] 
+beacase [!Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist FAIL to create Ioc Bean name=[avatarSystem] 
+beacase [!Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist]] FAIL to create Ioc Bean name=[logSystem] 
+beacase [!Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist FAIL to create Ioc Bean name=[avatarSystem] 
+beacase [!Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist] FAIL to create Ioc Bean name=[accountSystem] 
+beacase [!Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist FAIL to create Ioc Bean name=[avatarSystem] 
+beacase [!Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist]]] FAIL to create Ioc Bean name=[gameContext] 
+beacase [!Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist FAIL to create Ioc Bean name=[avatarSystem] 
+beacase [!Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist] FAIL to create Ioc Bean name=[accountSystem] 
+beacase [!Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist FAIL to create Ioc Bean name=[avatarSystem] 
+beacase [!Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist]] FAIL to create Ioc Bean name=[logSystem] 
+beacase [!Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist FAIL to create Ioc Bean name=[avatarSystem] 
+beacase [!Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist] FAIL to create Ioc Bean name=[accountSystem] 
+beacase [!Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist FAIL to create Ioc Bean name=[avatarSystem] 
+beacase [!Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist]]]]
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:141)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:196)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.xgame.bootstrap.GameMain.main(GameMain.java:29)
+Caused by: org.nutz.ioc.IocException: !Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist FAIL to create Ioc Bean name=[avatarSystem] 
+beacase [!Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist] FAIL to create Ioc Bean name=[accountSystem] 
+beacase [!Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist FAIL to create Ioc Bean name=[avatarSystem] 
+beacase [!Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist]] FAIL to create Ioc Bean name=[logSystem] 
+beacase [!Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist FAIL to create Ioc Bean name=[avatarSystem] 
+beacase [!Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist] FAIL to create Ioc Bean name=[accountSystem] 
+beacase [!Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist FAIL to create Ioc Bean name=[avatarSystem] 
+beacase [!Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist]]]
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:141)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:196)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:221)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:140)
+	at com.yxy.core.AutoAssemble.checkIocBean(AutoAssemble.java:32)
+	at com.yxy.core.GameContext.init(GameContext.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.nutz.ioc.trigger.MethodEventTrigger.trigger(MethodEventTrigger.java:18)
+	at org.nutz.ioc.weaver.DefaultWeaver.onCreate(DefaultWeaver.java:74)
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:135)
+	... 4 more
+Caused by: org.nutz.ioc.IocException: !Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist FAIL to create Ioc Bean name=[avatarSystem] 
+beacase [!Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist] FAIL to create Ioc Bean name=[accountSystem] 
+beacase [!Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist FAIL to create Ioc Bean name=[avatarSystem] 
+beacase [!Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist]]
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:141)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:196)
+	at org.nutz.ioc.val.ReferValue.get(ReferValue.java:24)
+	at org.nutz.ioc.weaver.FieldInjector.inject(FieldInjector.java:31)
+	at org.nutz.ioc.weaver.DefaultWeaver.fill(DefaultWeaver.java:56)
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:132)
+	... 16 more
+Caused by: org.nutz.ioc.IocException: !Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist FAIL to create Ioc Bean name=[avatarSystem] 
+beacase [!Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist]
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:141)
+	at org.nutz.ioc.impl.NutIoc.get(NutIoc.java:196)
+	at org.nutz.ioc.val.ReferValue.get(ReferValue.java:24)
+	at org.nutz.ioc.weaver.FieldInjector.inject(FieldInjector.java:31)
+	at org.nutz.ioc.weaver.DefaultWeaver.fill(DefaultWeaver.java:56)
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:132)
+	... 21 more
+Caused by: org.nutz.dao.DaoException: !Nutz SQL Error: 'SELECT * FROM kevalue_init '
+PreparedStatement: 
+'SELECT * FROM kevalue_init '
+CaseMessage=Table 'xgame_config.kevalue_init' doesn't exist
+	at org.nutz.dao.impl.sql.run.NutDaoExecutor.exec(NutDaoExecutor.java:97)
+	at org.nutz.dao.impl.DaoSupport$DaoExec.invoke(DaoSupport.java:264)
+	at org.nutz.dao.impl.sql.run.NutDaoRunner.run(NutDaoRunner.java:64)
+	at org.nutz.dao.impl.DaoSupport._exec(DaoSupport.java:219)
+	at org.nutz.dao.impl.NutDao.query(NutDao.java:483)
+	at org.nutz.dao.impl.NutDao.query(NutDao.java:488)
+	at com.xgame.module.avatar.conf.AvatarConfig.setValue(AvatarConfig.java:32)
+	at com.xgame.conf.AbsConfig.load(AbsConfig.java:33)
+	at com.xgame.module.avatar.AvatarSystem.load(AvatarSystem.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.nutz.ioc.trigger.MethodEventTrigger.trigger(MethodEventTrigger.java:18)
+	at org.nutz.ioc.weaver.DefaultWeaver.onCreate(DefaultWeaver.java:74)
+	at org.nutz.ioc.impl.ObjectMakerImpl.make(ObjectMakerImpl.java:135)
+	... 26 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'xgame_config.kevalue_init' doesn't exist
+	at sun.reflect.GeneratedConstructorAccessor7.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1054)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4190)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4122)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2570)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2731)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2812)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2761)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1612)
+	at com.alibaba.druid.pool.DruidPooledStatement.executeQuery(DruidPooledStatement.java:143)
+	at org.nutz.dao.impl.sql.run.NutDaoExecutor._runSelect(NutDaoExecutor.java:200)
+	at org.nutz.dao.impl.sql.run.NutDaoExecutor.exec(NutDaoExecutor.java:43)
+	... 41 more
+2016-02-19 18:04:23,418 [INFO] [main] Logs.<clinit> - Nutz is licensed under the Apache License, Version 2.0 .
+Report bugs : https://github.com/nutzam/nutz/issues
+2016-02-19 18:04:23,833 [INFO] [main] AnnotationIocLoader.<init> - Scan complete ! Found 8 classes in 1 base-packages!
+beans = ["accountSystem", "avatarSystem", "accountManager", "logSystem", "accountDao", "avatarManager", "logDao", "avatarDao"]
+2016-02-19 18:04:23,836 [INFO] [main] NutIoc.<init> - NutIoc init begin ...
+2016-02-19 18:04:23,838 [INFO] [main] NutIoc.<init> - ... NutIoc init complete
+2016-02-19 18:04:23,896 [INFO] [main] ScheduledManager.<init> - 开启定时器
+2016-02-19 18:04:24,012 [INFO] [main] NutFilePool.<init> - Init file-pool by: C:\Users\Administrator/.nutz/tmp/dao/ [200000]
+2016-02-19 18:04:24,016 [INFO] [main] NutFilePool.<init> - file-pool.cursor: 0
+2016-02-19 18:04:24,028 [INFO] [main] Jdbcs.getExpert - Get Connection from DataSource for JdbcExpert
+2016-02-19 18:04:24,352 [INFO] [main] DruidDataSource.init - {dataSource-1} inited
+2016-02-19 18:04:24,461 [INFO] [main] Jdbcs.getExpert - Get Connection from DataSource for JdbcExpert
+2016-02-19 18:04:24,475 [INFO] [main] DruidDataSource.init - {dataSource-2} inited
+2016-02-19 18:04:24,505 [INFO] [main] AvatarManager.init - 全服角色数:0
+2016-02-19 18:04:24,508 [INFO] [main] Jdbcs.getExpert - Get Connection from DataSource for JdbcExpert
+2016-02-19 18:04:24,520 [INFO] [main] DruidDataSource.init - {dataSource-3} inited
+2016-02-19 18:04:24,590 [INFO] [main] Class.add - 成功创建 : com.xgame.module.blog.LogSystem
+2016-02-19 18:04:24,591 [INFO] [main] Class.add - 成功创建 : com.xgame.module.account.AccountSystem
+2016-02-19 18:04:24,601 [INFO] [main] Class.add - 成功创建 : com.xgame.module.avatar.AvatarSystem
+2016-02-19 18:04:24,657 [INFO] [main] Class.initAllSystem - All system init() end
+2016-02-19 18:04:24,672 [INFO] [main] log.info - Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2016-02-19 18:04:24,710 [INFO] [main] log.info - jetty-6.1.26
+2016-02-19 18:04:24,861 [INFO] [main] log.info - NO JSP Support for /, did not find org.apache.jasper.servlet.JspServlet
+2016-02-19 18:04:24,920 [INFO] [main] NutFilter.init - NutFilter[org.nutz.mvc.NutFilter-1984975621] starting ...
+2016-02-19 18:04:24,923 [INFO] [main] ErrorResourceLocation.<init> - ErrorResourceLocation [loc=F:\GameCore2.0\WebRoot\WEB-INF\classes], maybe it is in your classpath, but not exist
+2016-02-19 18:04:24,925 [WARN] [main] log.warn - failed org.nutz.mvc.NutFilter-1984975621: org.nutz.mvc.NutConfigException: java.lang.ClassNotFoundException: com.wabao.web.MainModule
+2016-02-19 18:04:24,925 [ERROR] [main] log.warn - Failed startup of context org.mortbay.jetty.webapp.WebAppContext@343570b7{/,file:/F:/GameCore2.0/WebRoot}
+org.nutz.mvc.NutConfigException: java.lang.ClassNotFoundException: com.wabao.web.MainModule
+	at org.nutz.mvc.config.AbstractNutConfig.getMainModule(AbstractNutConfig.java:126)
+	at org.nutz.mvc.config.AbstractNutConfig.createLoading(AbstractNutConfig.java:42)
+	at org.nutz.mvc.ActionHandler.<init>(ActionHandler.java:18)
+	at org.nutz.mvc.NutFilter.init(NutFilter.java:77)
+	at org.mortbay.jetty.servlet.FilterHolder.doStart(FilterHolder.java:97)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.servlet.ServletHandler.initialize(ServletHandler.java:713)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:140)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at com.yxy.web.WebServer.start(WebServer.java:55)
+	at com.yxy.core.GameContext.startWithWeb(GameContext.java:112)
+	at com.xgame.bootstrap.GameMain.main(GameMain.java:30)
+Caused by: java.lang.ClassNotFoundException: com.wabao.web.MainModule
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at org.nutz.lang.Lang.loadClass(Lang.java:1808)
+	at org.nutz.mvc.config.AbstractNutConfig.getMainModule(AbstractNutConfig.java:118)
+	... 17 more
+2016-02-19 18:04:24,984 [INFO] [main] log.info - Started SelectChannelConnector@0.0.0.0:1052
+2016-02-19 18:04:25,067 [ERROR] [main] WebServer.start - Self-Testing fail !!Server start fail?!!
+2016-02-19 18:04:25,067 [INFO] [main] log.info - Stopped SelectChannelConnector@0.0.0.0:1052
+2016-02-19 18:04:25,280 [INFO] [main] NetServer.startup - NetServer listen on port：1051
+2016-02-19 18:04:25,282 [INFO] [main] GameContext.start - Game Server is up!
+2016-02-19 18:06:17,732 [INFO] [main] Logs.<clinit> - Nutz is licensed under the Apache License, Version 2.0 .
+Report bugs : https://github.com/nutzam/nutz/issues
+2016-02-19 18:06:18,158 [INFO] [main] AnnotationIocLoader.<init> - Scan complete ! Found 8 classes in 1 base-packages!
+beans = ["accountSystem", "avatarSystem", "accountManager", "logSystem", "accountDao", "avatarManager", "logDao", "avatarDao"]
+2016-02-19 18:06:18,160 [INFO] [main] NutIoc.<init> - NutIoc init begin ...
+2016-02-19 18:06:18,162 [INFO] [main] NutIoc.<init> - ... NutIoc init complete
+2016-02-19 18:06:18,218 [INFO] [main] ScheduledManager.<init> - 开启定时器
+2016-02-19 18:06:18,304 [INFO] [main] NutFilePool.<init> - Init file-pool by: C:\Users\Administrator/.nutz/tmp/dao/ [200000]
+2016-02-19 18:06:18,307 [INFO] [main] NutFilePool.<init> - file-pool.cursor: 0
+2016-02-19 18:06:18,315 [INFO] [main] Jdbcs.getExpert - Get Connection from DataSource for JdbcExpert
+2016-02-19 18:06:18,652 [INFO] [main] DruidDataSource.init - {dataSource-1} inited
+2016-02-19 18:06:18,761 [INFO] [main] Jdbcs.getExpert - Get Connection from DataSource for JdbcExpert
+2016-02-19 18:06:18,773 [INFO] [main] DruidDataSource.init - {dataSource-2} inited
+2016-02-19 18:06:18,806 [INFO] [main] AvatarManager.init - 全服角色数:0
+2016-02-19 18:06:18,808 [INFO] [main] Jdbcs.getExpert - Get Connection from DataSource for JdbcExpert
+2016-02-19 18:06:18,821 [INFO] [main] DruidDataSource.init - {dataSource-3} inited
+2016-02-19 18:06:18,997 [INFO] [main] Class.add - 成功创建 : com.xgame.module.blog.LogSystem
+2016-02-19 18:06:18,998 [INFO] [main] Class.add - 成功创建 : com.xgame.module.account.AccountSystem
+2016-02-19 18:06:19,004 [INFO] [main] Class.add - 成功创建 : com.xgame.module.avatar.AvatarSystem
+2016-02-19 18:06:19,064 [INFO] [main] Class.initAllSystem - All system init() end
+2016-02-19 18:06:19,081 [INFO] [main] log.info - Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2016-02-19 18:06:19,112 [INFO] [main] log.info - jetty-6.1.26
+2016-02-19 18:06:19,203 [INFO] [main] log.info - NO JSP Support for /, did not find org.apache.jasper.servlet.JspServlet
+2016-02-19 18:06:19,253 [INFO] [main] NutFilter.init - NutFilter[org.nutz.mvc.NutFilter-1108924067] starting ...
+2016-02-19 18:06:19,257 [INFO] [main] ErrorResourceLocation.<init> - ErrorResourceLocation [loc=F:\GameCore2.0\WebRoot\WEB-INF\classes], maybe it is in your classpath, but not exist
+2016-02-19 18:06:19,259 [WARN] [main] log.warn - failed org.nutz.mvc.NutFilter-1108924067: org.nutz.mvc.NutConfigException: java.lang.ClassNotFoundException: com.wabao.web.MainModule
+2016-02-19 18:06:19,260 [ERROR] [main] log.warn - Failed startup of context org.mortbay.jetty.webapp.WebAppContext@3943a2be{/,file:/F:/GameCore2.0/WebRoot}
+org.nutz.mvc.NutConfigException: java.lang.ClassNotFoundException: com.wabao.web.MainModule
+	at org.nutz.mvc.config.AbstractNutConfig.getMainModule(AbstractNutConfig.java:126)
+	at org.nutz.mvc.config.AbstractNutConfig.createLoading(AbstractNutConfig.java:42)
+	at org.nutz.mvc.ActionHandler.<init>(ActionHandler.java:18)
+	at org.nutz.mvc.NutFilter.init(NutFilter.java:77)
+	at org.mortbay.jetty.servlet.FilterHolder.doStart(FilterHolder.java:97)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.servlet.ServletHandler.initialize(ServletHandler.java:713)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:140)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at com.yxy.web.WebServer.start(WebServer.java:55)
+	at com.yxy.core.GameContext.startWithWeb(GameContext.java:112)
+	at com.xgame.bootstrap.GameMain.main(GameMain.java:30)
+Caused by: java.lang.ClassNotFoundException: com.wabao.web.MainModule
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at org.nutz.lang.Lang.loadClass(Lang.java:1808)
+	at org.nutz.mvc.config.AbstractNutConfig.getMainModule(AbstractNutConfig.java:118)
+	... 17 more
+2016-02-19 18:06:19,289 [INFO] [main] log.info - Started SelectChannelConnector@0.0.0.0:1052
+2016-02-19 18:06:19,354 [ERROR] [main] WebServer.start - Self-Testing fail !!Server start fail?!!
+2016-02-19 18:06:19,354 [INFO] [main] log.info - Stopped SelectChannelConnector@0.0.0.0:1052
+2016-02-19 18:06:19,525 [INFO] [main] NetServer.startup - NetServer listen on port：1051
+2016-02-19 18:06:19,525 [INFO] [main] GameContext.start - Game Server is up!
+2016-02-19 18:08:00,279 [INFO] [main] Logs.<clinit> - Nutz is licensed under the Apache License, Version 2.0 .
+Report bugs : https://github.com/nutzam/nutz/issues
+2016-02-19 18:08:00,708 [INFO] [main] AnnotationIocLoader.<init> - Scan complete ! Found 8 classes in 1 base-packages!
+beans = ["accountSystem", "avatarSystem", "accountManager", "logSystem", "accountDao", "avatarManager", "logDao", "avatarDao"]
+2016-02-19 18:08:00,711 [INFO] [main] NutIoc.<init> - NutIoc init begin ...
+2016-02-19 18:08:00,714 [INFO] [main] NutIoc.<init> - ... NutIoc init complete
+2016-02-19 18:08:00,759 [INFO] [main] ScheduledManager.<init> - 开启定时器
+2016-02-19 18:08:00,841 [INFO] [main] NutFilePool.<init> - Init file-pool by: C:\Users\Administrator/.nutz/tmp/dao/ [200000]
+2016-02-19 18:08:00,843 [INFO] [main] NutFilePool.<init> - file-pool.cursor: 0
+2016-02-19 18:08:00,851 [INFO] [main] Jdbcs.getExpert - Get Connection from DataSource for JdbcExpert
+2016-02-19 18:08:01,166 [INFO] [main] DruidDataSource.init - {dataSource-1} inited
+2016-02-19 18:08:01,282 [INFO] [main] Jdbcs.getExpert - Get Connection from DataSource for JdbcExpert
+2016-02-19 18:08:01,296 [INFO] [main] DruidDataSource.init - {dataSource-2} inited
+2016-02-19 18:08:01,329 [INFO] [main] AvatarManager.init - 全服角色数:0
+2016-02-19 18:08:01,331 [INFO] [main] Jdbcs.getExpert - Get Connection from DataSource for JdbcExpert
+2016-02-19 18:08:01,349 [INFO] [main] DruidDataSource.init - {dataSource-3} inited
+2016-02-19 18:08:01,397 [INFO] [main] Class.add - 成功创建 : com.xgame.module.blog.LogSystem
+2016-02-19 18:08:01,398 [INFO] [main] Class.add - 成功创建 : com.xgame.module.account.AccountSystem
+2016-02-19 18:08:01,406 [INFO] [main] Class.add - 成功创建 : com.xgame.module.avatar.AvatarSystem
+2016-02-19 18:08:01,462 [INFO] [main] Class.initAllSystem - All system init() end
+2016-02-19 18:08:01,480 [INFO] [main] log.info - Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2016-02-19 18:08:01,508 [INFO] [main] log.info - jetty-6.1.26
+2016-02-19 18:08:01,594 [INFO] [main] log.info - NO JSP Support for /, did not find org.apache.jasper.servlet.JspServlet
+2016-02-19 18:08:01,650 [INFO] [main] NutFilter.init - NutFilter[org.nutz.mvc.NutFilter-1108924067] starting ...
+2016-02-19 18:08:01,654 [INFO] [main] ErrorResourceLocation.<init> - ErrorResourceLocation [loc=F:\GameCore2.0\WebRoot\WEB-INF\classes], maybe it is in your classpath, but not exist
+2016-02-19 18:08:01,656 [WARN] [main] log.warn - failed org.nutz.mvc.NutFilter-1108924067: org.nutz.mvc.NutConfigException: java.lang.ClassNotFoundException: com.wabao.web.MainModule
+2016-02-19 18:08:01,657 [ERROR] [main] log.warn - Failed startup of context org.mortbay.jetty.webapp.WebAppContext@3943a2be{/,file:/F:/GameCore2.0/WebRoot}
+org.nutz.mvc.NutConfigException: java.lang.ClassNotFoundException: com.wabao.web.MainModule
+	at org.nutz.mvc.config.AbstractNutConfig.getMainModule(AbstractNutConfig.java:126)
+	at org.nutz.mvc.config.AbstractNutConfig.createLoading(AbstractNutConfig.java:42)
+	at org.nutz.mvc.ActionHandler.<init>(ActionHandler.java:18)
+	at org.nutz.mvc.NutFilter.init(NutFilter.java:77)
+	at org.mortbay.jetty.servlet.FilterHolder.doStart(FilterHolder.java:97)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.servlet.ServletHandler.initialize(ServletHandler.java:713)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:140)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at com.yxy.web.WebServer.start(WebServer.java:55)
+	at com.yxy.core.GameContext.startWithWeb(GameContext.java:112)
+	at com.xgame.bootstrap.GameMain.main(GameMain.java:30)
+Caused by: java.lang.ClassNotFoundException: com.wabao.web.MainModule
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at org.nutz.lang.Lang.loadClass(Lang.java:1808)
+	at org.nutz.mvc.config.AbstractNutConfig.getMainModule(AbstractNutConfig.java:118)
+	... 17 more
+2016-02-19 18:08:01,685 [INFO] [main] log.info - Started SelectChannelConnector@0.0.0.0:1052
+2016-02-19 18:08:01,747 [ERROR] [main] WebServer.start - Self-Testing fail !!Server start fail?!!
+2016-02-19 18:08:01,748 [INFO] [main] log.info - Stopped SelectChannelConnector@0.0.0.0:1052
+2016-02-19 18:08:01,941 [INFO] [main] NetServer.startup - NetServer listen on port：1051
+2016-02-19 18:08:01,941 [INFO] [main] GameContext.start - Game Server is up!
+2016-02-19 18:09:25,448 [INFO] [NioProcessor-3] LoggingFilter.log - CREATED
+2016-02-19 18:09:25,454 [INFO] [pool-8-thread-1] LoggingFilter.log - OPENED
+2016-02-19 18:09:25,457 [INFO] [main] Client.startup - success connect to 127.0.0.1:1051
+2016-02-19 18:09:25,461 [INFO] [main] Message.calcBytes - static filed occurred: private static final long [serialVersionUID]
+2016-02-19 18:09:25,461 [INFO] [main] Message.calcBytes - static filed occurred: public static final byte [SIZE]
+2016-02-19 18:09:25,636 [INFO] [NioProcessor-3] Message.calcBytes - static filed occurred: private static final long [serialVersionUID]
+2016-02-19 18:09:25,637 [INFO] [NioProcessor-3] Message.calcBytes - static filed occurred: public static final byte [SIZE]
+2016-02-19 18:09:25,702 [INFO] [pool-8-thread-1] LoggingFilter.log - RECEIVED: [header=[type=102, state=200, length=48], ssid=2, body={"name":"test2","pass":"2.2","platform":"wabao"}]
+2016-02-19 18:09:25,709 [INFO] [HashThread-pool-3-thread-1] AccountSystem.login - 新账号登录:test2/127.0.0.1:62242
+2016-02-19 18:09:25,720 [INFO] [pool-8-thread-1] LoggingFilter.log - SENT: [header=[type=-102, state=200, length=14], ssid=2, body={"avatarId":0}]
+2016-02-19 18:09:25,776 [INFO] [pool-8-thread-1] LoggingFilter.log - RECEIVED: [header=[type=2000, state=200, length=30], ssid=2, body={"gender":2,"name":"新项53"}]
+2016-02-19 18:09:25,840 [INFO] [HashThread-pool-3-thread-1] EventManager.fireEvent - No Subscriber for Event [type=6, source=com.xgame.module.avatar.dao.Avatar@36684748, data=null]
+2016-02-19 18:09:25,842 [WARN] [HashThread-pool-3-thread-1] MessageFacadeInvoker.handleMessage - MSG type=-2000,执行超时>50ms,TIME=65ms
+2016-02-19 18:09:25,845 [INFO] [pool-8-thread-1] LoggingFilter.log - SENT: [header=[type=-2000, state=200, length=166], ssid=2, body={"avatar":{"diamond":1000,"energy":20,"energyUT":0,"exp":0,"gender":2,"icon":"woman.jpg","id":1000001,"level":1,"name":"1000001","score":0,"vipLevel":0,"vipPoint":0}}]
+2016-02-19 18:10:01,412 [INFO] [pool-3-thread-1] LogSystem.execute - 当前在线人数:1|1
+2016-02-19 18:10:01,413 [WARN] [pool-3-thread-1] JobRun.run - 任务:[onlineCount]执行完成,耗时: 5 ms
+2016-02-19 18:10:40,849 [INFO] [pool-8-thread-3] LoggingFilter.log - RECEIVED: [header=[type=2001, state=200, length=18], ssid=2, body={"reconn":"false"}]
+2016-02-19 18:10:40,850 [WARN] [HashThread-pool-3-thread-1] MessageFacadeInvoker.handleMessage - 
+com.yxy.core.msg.adp.AdaptorException: 消息:2001 解析参数错误.参数名:reconn 参数类型:int
+	at com.yxy.core.msg.adp.Adaptor.getException(Adaptor.java:169)
+	at com.yxy.core.msg.adp.Adaptor.getValue(Adaptor.java:151)
+	at com.yxy.core.msg.adp.Adaptor.getOptionalObj(Adaptor.java:116)
+	at com.yxy.core.msg.adp.Adaptor.adaptorMsg(Adaptor.java:97)
+	at com.yxy.core.msg.MessageCallBack.handle2(MessageCallBack.java:54)
+	at com.yxy.core.msg.MessageFacadeInvoker.handleMessage(MessageFacadeInvoker.java:86)
+	at com.yxy.core.msg.MessageFacadeInvoker.run(MessageFacadeInvoker.java:33)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NumberFormatException: For input string: "false"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:580)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at com.alibaba.fastjson.util.TypeUtils.castToInt(TypeUtils.java:421)
+	at com.alibaba.fastjson.JSONObject.getIntValue(JSONObject.java:202)
+	at com.yxy.core.msg.adp.Adaptor.getValue(Adaptor.java:132)
+	... 10 more
+2016-02-19 18:10:40,851 [INFO] [pool-8-thread-3] LoggingFilter.log - SENT: [header=[type=-2001, state=198, length=2], ssid=2, body={}]
+2016-02-19 18:11:06,485 [INFO] [pool-8-thread-3] LoggingFilter.log - RECEIVED: [header=[type=2001, state=200, length=14], ssid=2, body={"reconn":"0"}]
+2016-02-19 18:11:06,487 [INFO] [pool-8-thread-3] LoggingFilter.log - SENT: [header=[type=-2001, state=200, length=166], ssid=2, body={"avatar":{"diamond":1000,"energy":20,"energyUT":0,"exp":0,"gender":2,"icon":"woman.jpg","id":1000001,"level":1,"name":"1000001","score":0,"vipLevel":0,"vipPoint":0}}]
+2016-02-19 18:11:24,281 [WARN] [pool-8-thread-3] LoggingFilter.log - EXCEPTION :
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:280)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:1)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:690)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:664)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:653)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$9(AbstractPollingIoProcessor.java:650)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1112)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-02-19 18:11:24,282 [WARN] [pool-8-thread-3] MessageHandler.exceptionCaught - class java.io.IOException 远程主机强迫关闭了一个现有的连接。 (0x00000002: nio socket, server, null => 0.0.0.0/0.0.0.0:1051)
+2016-02-19 18:11:24,285 [INFO] [pool-8-thread-3] LoggingFilter.log - CLOSED
+2016-02-19 18:11:24,286 [INFO] [HashThread-pool-3-thread-1] AvatarSystem.offline - 1000001下线事件处理
+2016-02-19 18:11:24,287 [INFO] [HashThread-pool-3-thread-1] AccountSystem.logout - 账号[test2]下线,IP/127.0.0.1:62242
